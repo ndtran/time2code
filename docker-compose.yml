@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  cron-time2sport: # service name
+    env_file:
+      - .env
+    build: .
+    container_name: MP_time2sport_cron
+    environment:
+      - ROCKETCHAT_TOKEN=${ROCKETCHAT_TOKEN}
+      - ROCKETCHAT_USERID=${ROCKETCHAT_USERID}
+      #image: ${REGISTRY_HOST}/stackdemo # registery + tag

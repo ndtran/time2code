@@ -1,0 +1,5 @@
+0 9 * * 1-5 /time2sport/time2sport.sh motivation >> /var/log/time2sport.log
+15 9 * * 1-5 /time2sport/time2sport.sh training 1 >> /var/log/time2sport.log
+15 11 * * 1-5 /time2sport/time2sport.sh training 2 >> /var/log/time2sport.log
+15 14 * * 1-5 /time2sport/time2sport.sh training 3 >> /var/log/time2sport.log
+15 16 * * 1-5 /time2sport/time2sport.sh training 4 >> /var/log/time2sport.log
