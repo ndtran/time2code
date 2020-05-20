@@ -1,9 +1,13 @@
 # Time2sport reminder
 
 > what ? Exercices reminder (9:15 - 11:15 - 14:15 - 16:15)
+
 > why ? During the confinement, it's good to stay in good health. Especially with coworkers and work communication channel.
+
 > where ? Use with the rocket chat of MARCOPOLO project.
+
 > How ? cron job on Apline with docker
+
 > Next ? Telegram bot ^.^
 
 ## Getting Started
