@@ -108,7 +108,7 @@ Time2Sport() {
         "avatar": "'${IMAGE_URL[$DOW]}'",
         "channel": "'${ROCKETCHAT_CHANNEL}'",
         "attachments": [{
-            "IMAGE_URL": "'${IMAGE_URL[$DOW]}'",
+            "image_url": "'${IMAGE_URL[$DOW]}'",
             "title": "Time to '${DAY[$DOW]}' Training!",
             "text": "9:15 - 11:15 - 14:15 - 16:15"
         }]}'
