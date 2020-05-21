@@ -8,11 +8,19 @@
 
 > How ? cron job on Apline with docker
 
-> Next ? Telegram bot ^.^
+> Test on VPS with configuration:
+
+- VPS with Ubuntu 18.04.4 LTS
+- Docker version 19.03.6, build 369ce74a3c
+- docker-compose version 1.17.1
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+> Motivation [TBD]
+
+> Choice of technologies [TBD]
+
+> What you will learn? [TBD]
 
 ### you will need
 
