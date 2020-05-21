@@ -142,8 +142,58 @@ if [[ $TYPE_MESSAGE == "training" ]] ; then
         "alias": "'${ROCKETCHAT_ALIAS}'",
         "avatar": "'${image_url[$DOW]}'",
         "channel": "'${ROCKETCHAT_CHANNEL}'",
+<<<<<<< Updated upstream
         "text": "'"${message}${noob}${easy}${medium}${difficult}${challenge}"'" 
         }'
     echo '' # return line for the log
     echo '' # return line for the log
 fi
+=======
+        "attachments": [{
+            "image_url": "'${IMAGE_URL[$DOW]}'",
+            "title": "Time to '${DAY[$DOW]}' Training!",
+            "text": "9:15 - 11:15 - 14:15 - 16:15"
+        }]}'
+        echo '' # return line for the log
+        echo '' # return line for the log
+    fi
+
+    ###########
+    # SEND MESSAGE TRAINING
+    ###########
+
+    if [[ $TYPE_MESSAGE == "training" ]] ; then
+        # TRAINING MESSAGE
+        nb='10'
+        if [[ -z "${HOME}" ]]; then
+            nb=$(( $nb + 10 )) 
+        fi
+
+        message="@all let s go with the ${SESSION} round: \n"
+        noob="[noob :space_invader:] 10 push-up + 10 crunch abs \n"
+        easy="[geek :robot:] $(( $nb )) push-up + $(( $nb )) crunch abs + $(( $nb )) plank \n"
+        medium="[saiyen :muscle:] $(( $nb + 5 )) push-up + $(( $nb + 5 )) crunch ab + $(( $nb + 5 )) plank \n"
+        difficult="[super saiyen :punch:] $(( $nb + 10 )) push-up + $(( $nb + 10 )) crunch abs + $(( $nb + 10 )) plank + $(( $nb + 10 )) chair dips \n"
+        challenge="[SS2 :hot_face:] $(( $nb + 10 )) push-up + $(( $nb + 10 )) crunch abs + $(( $nb + 10 )) plank + $(( $nb + 10 )) chair dips + $(( $nb + 90 )) jumping rope"
+        # echo ${message}${noob}${easy}${medium}${difficult}${challenge}
+
+        curl -H "X-Auth-Token: ${ROCKETCHAT_TOKEN}" \
+                -H "X-User-Id: ${ROCKETCHAT_USERID}" \
+                -H "Content-type:application/json" \
+                https://rocketchat-marco-polo.openshift.elca-services.com/api/v1/chat.postMessage \
+                -d '{
+            "alias": "'${ROCKETCHAT_ALIAS}'",
+            "avatar": "'${IMAGE_URL[$DOW]}'",
+            "channel": "'${ROCKETCHAT_CHANNEL}'",
+            "text": "'"${message}${noob}${easy}${medium}${difficult}${challenge}"'" 
+            }'
+        echo '' # return line for the log
+        echo '' # return line for the log
+    fi
+}
+
+###########
+# RUN
+###########
+Time2Sport $@
+>>>>>>> Stashed changes
