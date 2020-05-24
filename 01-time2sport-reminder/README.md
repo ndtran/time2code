@@ -1,39 +1,37 @@
 # Time2sport reminder
 
-> what ? Exercices reminder (9:15 - 11:15 - 14:15 - 16:15)
+> Motivation
 
-> why ? During the confinement, it's good to stay in good health. Especially with coworkers and work communication channel.
+- what ? Exercices reminder (9:15 - 11:15 - 14:15 - 16:15)
+- why ? During the confinement, it's good to stay in good health. Especially with coworkers and work communication channel.
+- where ? Use with the rocket chat of MARCOPOLO project.
+- How ? cron job on Apline with docker
 
-> where ? Use with the rocket chat of MARCOPOLO project.
-
-> How ? cron job on Apline with docker
-
-> Test on VPS with configuration:
+> Choice of technologies
 
 - VPS with Ubuntu 18.04.4 LTS
 - Docker version 19.03.6, build 369ce74a3c
 - docker-compose version 1.17.1
-
-## Getting Started
-
-> Motivation [TBD]
-
-> Choice of technologies [TBD]
+- bash
 
 > What you will learn? [TBD]
 
-### you will need
+---
 
-> add .env with variables:
-
-- ROCKETCHAT_TOKEN='xxx'
-- ROCKETCHAT_USERID='yyy'
+## Getting Started
 
 > three ways to run:
 
 - dockerfile
 - docker-compose
 - deploy in docker swarm
+
+### setup env variable
+
+> add .env with variables:
+
+- ROCKETCHAT_TOKEN='xxx'
+- ROCKETCHAT_USERID='yyy'
 
 ### install docker
 
