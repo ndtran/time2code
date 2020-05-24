@@ -30,8 +30,10 @@
 
 > add .env with variables:
 
-- ROCKETCHAT_TOKEN='xxx'
-- ROCKETCHAT_USERID='yyy'
+```
+ROCKETCHAT_TOKEN=xxx
+ROCKETCHAT_USERID=yyy
+```
 
 ### install docker
 
