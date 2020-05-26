@@ -1,4 +1,4 @@
-const { Telegraf, Markup, Extra } = require('telegraf')
+const { Telegraf } = require('telegraf')
 
 /*
  * FOAAS (https://www.foaas.com/)
@@ -83,13 +83,7 @@ exports.launch = function (bot) {
           `<b>Hello</b>.
                 ${wordsKey.map((element) => '\n/foaas <i>' + element + '</i>')} ${wordsWithNameKey.map(
             (element) => '\n/foaas <i>' + element + '</i> [name]'
-          )}`,
-          Extra.HTML().markup(
-            Markup.inlineKeyboard([
-              Markup.callbackButton('Not bad', 'not bad'),
-              Markup.callbackButton('All right', 'all right'),
-            ])
-          )
+          )}`
         )
         return
       }
