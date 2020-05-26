@@ -1,6 +1,9 @@
 # Time2sport telegram bot
 
-> what ?
+> what ? create a telegram bot with
+
+- foaas (https://www.foaas.com/)
+- dev quiz (https://quizapi.io/)
 
 > why ? play with telegram bot
 
@@ -33,3 +36,32 @@ https://core.telegram.org/bots
 ```
 a
 ```
+
+# docker
+
+```
+$ docker build -t telegram-bot-image .
+$ docker run -d --env-file .env -p 3000:3000 --name telegram-bot telegram-bot-image
+$ docker container ls -a
+$ docker ps
+$ docker logs telegram-bot
+$ docker exec -it telegram-bot /bin/sh
+$ docker container stop telegram-bot
+$ docker container rm telegram-bot
+
+```
+
+## RUN WITH docker-compose
+
+```
+$ docker-compose build
+$ docker-compose up -d
+$ docker-compose ps
+$ docker-compose down
+```
+
+# quiz
+
+Prerequisites
+An API Key for the Quiz API, you can get it totally for free for developers:
+https://quizapi.io/clientarea/settings/token

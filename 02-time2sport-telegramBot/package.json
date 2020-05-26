@@ -1,14 +1,18 @@
 {
-  "name": "time2sport-telegrambot",
+  "name": "padawan-telegram-crdfbot",
   "version": "1.0.0",
-  "description": "Time2sport telegram bot",
+  "description": "Time2Code telegram bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./index.js localhost 8080"
+    "start": "nodemon ./src/index.js localhost 8080"
   },
   "author": "Nico T.",
   "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
   "dependencies": {
     "express": "^4.17.1",
     "telegraf": "^3.38.0"

@@ -26,7 +26,7 @@
 - docker-compose
 - deploy in docker swarm
 
-### setup env variable
+### Prerequisites
 
 > add .env with variables:
 
