@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  telegram-bot:
+    env_file:
+      - .env
+    build: .
+    container_name: telegram-bot
+    ports:
+      - '3000:3000'
+    environment:
+      - PORT=${PORT}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - QUIZ_API_TOKEN=${QUIZ_API_TOKEN}
