@@ -24,6 +24,7 @@
 ```
 $ npm init
 $ npm install express telegraf
+$ npm install --save node-fetch
 $ npm install --save-dev nodemon
 $ npm install --save-dev dotenv
 ```
