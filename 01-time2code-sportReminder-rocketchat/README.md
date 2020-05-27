@@ -1,54 +1,44 @@
 # Time2sport reminder
 
-> what ? Exercices reminder (9:15 - 11:15 - 14:15 - 16:15)
+> Motivation
 
-> why ? During the confinement, it's good to stay in good health. Especially with coworkers and work communication channel.
+- what ? Exercices reminder (9:15 - 11:15 - 14:15 - 16:15)
+- why ? During the confinement, it's good to stay in good health. Especially with coworkers and work communication channel.
+- where ? Use with the rocket chat of MARCOPOLO project.
+- How ? cron job on Apline with docker
 
-> where ? Use with the rocket chat of MARCOPOLO project.
-
-> How ? cron job on Apline with docker
-
-> Test on VPS with configuration:
+> Choice of technologies
 
 - VPS with Ubuntu 18.04.4 LTS
 - Docker version 19.03.6, build 369ce74a3c
 - docker-compose version 1.17.1
-
-## Getting Started
-
-> Motivation [TBD]
-
-> Choice of technologies [TBD]
+- bash
 
 > What you will learn? [TBD]
 
-### you will need
+---
+
+## Getting Started
+
+### Prerequisites
 
 > add .env with variables:
 
-- ROCKETCHAT_TOKEN='xxx'
-- ROCKETCHAT_USERID='yyy'
+```
+ROCKETCHAT_TOKEN=your_rocketChat_token
+ROCKETCHAT_USERID=your_rocketChat_userId
+```
 
-> three ways to run:
+### ways to run:
 
+- exec with bash the file time2sport.sh
 - dockerfile
 - docker-compose
 - deploy in docker swarm
 
-### install docker
-
-```
-$ sudo apt-get update
-$ sudo apt-get remove docker docker-engine docker.io
-$ sudo apt install docker.io
-$ sudo systemctl start docker
-$ sudo systemctl enable docker
-$ docker --version
-```
-
 ---
 
-## RUN WITH dockerfile script
+## RUN WITH dockerfile
 
 ```
 $ docker build -t time2sport-image .
@@ -108,7 +98,29 @@ $ docker stack services stackdemo
 
 ---
 
-## License
+# INFO
+
+## install docker on vps
+
+```
+$ sudo apt-get update
+$ sudo apt-get remove docker docker-engine docker.io
+$ sudo apt install docker.io
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
+$ docker --version
+```
+
+## cron
+
+```
+$ crontab -l  // get list
+$ crontab -e  // edit list
+```
+
+---
+
+# License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
