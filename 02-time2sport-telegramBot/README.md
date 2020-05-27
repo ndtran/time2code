@@ -1,4 +1,4 @@
-# Time2code telegram bot
+# Time2code telegram bot with Telegraf
 
 > Motivation
 
@@ -72,6 +72,19 @@ $ npm install express telegraf
 $ npm install --save node-fetch
 $ npm install --save-dev nodemon
 $ npm install --save-dev dotenv
+```
+
+## adapt prettier
+
+```
+{
+  "endOfLine": "auto",
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 120,
+  "semi": false
+}
+
 ```
 
 ## get Token
