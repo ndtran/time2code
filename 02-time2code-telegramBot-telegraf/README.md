@@ -12,6 +12,8 @@
 - VPS with Ubuntu 18.04.4 LTS
 - Docker version 19.03.6, build 369ce74a3c
 - docker-compose version 1.17.1
+- Node version 14
+- ExpresJS
 
 > What you will learn? [TBD]
 
@@ -64,7 +66,7 @@ $ docker-compose down
 
 # INFO
 
-## What we did to install dependecy
+## What we did to install dependency
 
 ```
 $ npm init
@@ -110,6 +112,12 @@ $ sudo systemctl start docker
 $ sudo systemctl enable docker
 $ docker --version
 ```
+
+## useful link
+
+https://telegraf.js.org/#/?id=example
+https://core.telegram.org/bots/api#message
+https://core.telegram.org/bots/api#sendpoll
 
 ---
 
