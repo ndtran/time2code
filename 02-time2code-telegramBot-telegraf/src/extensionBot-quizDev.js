@@ -55,6 +55,7 @@ const quizWizard = new WizardScene(
               quizId,
               userAnswer: key.replace('answer_', ''),
               isCorrect: key === answer,
+              answer: answer.replace('answer_', ''),
             })
           )
         )
@@ -73,13 +74,13 @@ const quizWizard = new WizardScene(
    */
   async (ctx) => {
     try {
-      const { quizId, userAnswer, isCorrect } = JSON.parse(ctx.callbackQuery.data)
+      const { quizId, userAnswer, isCorrect, answer } = JSON.parse(ctx.callbackQuery.data)
       const { id: userId, first_name: userFirstName } = ctx.callbackQuery.from
       const sayHello = `<a href="tg://user?id=${userId}">${userFirstName}</a>`
 
-      const reply = `${sayHello} responded with <b>${userAnswer}</b>. The answer is ${
-        isCorrect ? 'correct' : 'incorrect'
-      }`
+      const reply = `${sayHello} responded with <b>${userAnswer}</b>. The answer is <b>${
+        isCorrect ? 'correct 😁' : `incorrect 🤓 \nThe correct answer is ${answer}`
+      }</b>`
 
       // if we want to remove the message, we can edit it
       // ctx.editMessageCaption(`${reply}`, Extra.HTML())
