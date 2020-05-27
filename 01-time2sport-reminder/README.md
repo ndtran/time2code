@@ -20,35 +20,25 @@
 
 ## Getting Started
 
-> three ways to run:
-
-- dockerfile
-- docker-compose
-- deploy in docker swarm
-
 ### Prerequisites
 
 > add .env with variables:
 
 ```
-ROCKETCHAT_TOKEN=xxx
-ROCKETCHAT_USERID=yyy
+ROCKETCHAT_TOKEN=your_rocketChat_token
+ROCKETCHAT_USERID=your_rocketChat_userId
 ```
 
-### install docker
+### ways to run:
 
-```
-$ sudo apt-get update
-$ sudo apt-get remove docker docker-engine docker.io
-$ sudo apt install docker.io
-$ sudo systemctl start docker
-$ sudo systemctl enable docker
-$ docker --version
-```
+- exec with bash the file time2sport.sh
+- dockerfile
+- docker-compose
+- deploy in docker swarm
 
 ---
 
-## RUN WITH dockerfile script
+## RUN WITH dockerfile
 
 ```
 $ docker build -t time2sport-image .
@@ -108,7 +98,22 @@ $ docker stack services stackdemo
 
 ---
 
-## License
+# INFO
+
+## install docker on vps
+
+```
+$ sudo apt-get update
+$ sudo apt-get remove docker docker-engine docker.io
+$ sudo apt install docker.io
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
+$ docker --version
+```
+
+---
+
+# License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 

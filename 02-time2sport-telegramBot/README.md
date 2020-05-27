@@ -1,44 +1,43 @@
-# Time2sport telegram bot
+# Time2code telegram bot
 
-> what ? create a telegram bot with
+> Motivation
 
-- foaas (https://www.foaas.com/)
-- dev quiz (https://quizapi.io/)
+- what ? create a telegram bot with https://www.foaas.com/ https://quizapi.io/
+- why ? play with telegram bot
+- where ? https://telegram.org
+- How ? express.js, Telegraf.js
 
-> why ? play with telegram bot
-
-> where ?
-
-> How ? express.js, Telegraf.js
-
-> Test on VPS with configuration:
+> Choice of technologies
 
 - VPS with Ubuntu 18.04.4 LTS
 - Docker version 19.03.6, build 369ce74a3c
 - docker-compose version 1.17.1
 
-##
+> What you will learn? [TBD]
 
-# install dependecy
+---
 
-```
-$ npm init
-$ npm install express telegraf
-$ npm install --save node-fetch
-$ npm install --save-dev nodemon
-$ npm install --save-dev dotenv
-```
+## Getting Started
 
-# install dependecy
+### Prerequisites
 
-Every bot must be created via @botfater > run /newbot > get Access token
-https://core.telegram.org/bots
+> add .env with variables:
 
 ```
-a
+PORT=3000
+BOT_TOKEN=your_telegram_token_from_Bot_Father
+QUIZ_API_TOKEN=your_api_quiz_token
 ```
 
-# docker
+### ways to run:
+
+- npm start
+- dockerfile
+- docker-compose
+
+---
+
+## RUN WITH dockerfile
 
 ```
 $ docker build -t telegram-bot-image .
@@ -61,8 +60,48 @@ $ docker-compose ps
 $ docker-compose down
 ```
 
-# quiz
+---
 
-Prerequisites
+# INFO
+
+## What we did to install dependecy
+
+```
+$ npm init
+$ npm install express telegraf
+$ npm install --save node-fetch
+$ npm install --save-dev nodemon
+$ npm install --save-dev dotenv
+```
+
+## get Token
+
+### get telegram token
+
+Every bot must be created via @botfater > run /newbot > get Access token
+https://core.telegram.org/bots
+https://core.telegram.org/bots#6-botfather
+
+### get quiz token
+
 An API Key for the Quiz API, you can get it totally for free for developers:
 https://quizapi.io/clientarea/settings/token
+
+## install docker on vps
+
+```
+$ sudo apt-get update
+$ sudo apt-get remove docker docker-engine docker.io
+$ sudo apt install docker.io
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
+$ docker --version
+```
+
+---
+
+# License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
