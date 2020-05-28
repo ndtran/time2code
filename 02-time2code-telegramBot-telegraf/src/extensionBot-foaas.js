@@ -80,7 +80,7 @@ exports.launch = function (bot) {
 
       if (command === 'help' || command === 'list') {
         reply(
-          `<b>Hello</b>.
+          `Tchô !.
                 ${wordsKey.map((element) => '\n/foaas <i>' + element + '</i>')} ${wordsWithNameKey.map(
             (element) => '\n/foaas <i>' + element + '</i> [name]'
           )}`
