@@ -38,7 +38,7 @@ exports.launch = function (bot, apiKey) {
     )
   })
 
-  // automatic send quiz
+  // automatic send quiz if subscribe
   bot.hears('/quiz subscribe', (ctx) => {
     const {
       message: { chat },
@@ -54,6 +54,7 @@ exports.launch = function (bot, apiKey) {
     }
   })
 
+  // stop sending question
   bot.hears('/quiz unsubscribe', ({ message: { chat }, reply }) => {
     if (chat_ids.includes(chat.id)) {
       console.log('unsubscribe', chat.id)
@@ -133,7 +134,18 @@ const quizWizard = new WizardScene(
    */
   async (ctx) => {
     try {
-      console.log('nico', ctx.callbackQuery)
+      // force exit the loop of the scene
+      const text = ctx.message.text
+      if (text === '/quiz cancel') {
+        ctx.reply('last question is ☠️ \nStart a new question with command /quiz')
+        return ctx.scene.leave()
+      }
+
+      if (text === '/quiz') {
+        ctx.reply('🙈 no 🙊 answer yet \nCancel the last question with command /quiz cancel')
+      }
+
+      // user has clic on the inlineKeyboard (one of the question's answer)
       if (ctx.callbackQuery) {
         const { quizId, userAnswer, isCorrect, answer } = JSON.parse(ctx.callbackQuery.data)
         const { id: userId, first_name: userFirstName } = ctx.callbackQuery.from
