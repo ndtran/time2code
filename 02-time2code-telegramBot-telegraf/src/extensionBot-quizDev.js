@@ -15,8 +15,16 @@ let API_KEY = ''
 
 exports.launch = function (bot, apiKey) {
   API_KEY = apiKey
-  const stage = new Stage([quizWizard])
-  bot.use(session())
+
+  const stage = new Stage([quizWizard], { sessionName: 'chatSession' })
+  // @dev bot.use(session()) force it to work with the only one user.
+  // @dev for multiple user check https://github.com/telegraf/telegraf/issues/854
+  bot.use(
+    session({
+      property: 'chatSession',
+      getSessionKey: (ctx) => ctx.from && ctx.chat && `${ctx.chat.id}`,
+    })
+  )
   bot.use(stage.middleware())
 
   bot.hears('/quiz', async (ctx) => {
