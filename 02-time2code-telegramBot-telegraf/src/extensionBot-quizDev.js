@@ -134,9 +134,9 @@ const quizWizard = new WizardScene(
    */
   async (ctx) => {
     try {
-      if (ctx.message && ctx.message.text) {
+      if (ctx.message != null) {
         // force exit the loop of the scene
-        const text = ctx.message.text
+        const text = ctx.message.text || ''
         if (text === '/quiz cancel') {
           ctx.reply('last question is ☠️ \nStart a new question with command /quiz')
           return ctx.scene.leave()
