@@ -9,7 +9,7 @@
 
 > Choice of technologies
 
-- VPS with Ubuntu 18.04.4 LTS
+- VPS with Ubuntu 20.04 Server LTS
 - Docker version 19.03.6, build 369ce74a3c
 - docker-compose version 1.17.1
 - bash
