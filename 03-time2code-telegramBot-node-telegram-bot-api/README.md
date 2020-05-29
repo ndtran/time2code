@@ -1,11 +1,11 @@
-# Time2code telegram bot with Telegraf
+# Time2code telegram bot with node-telegram-bot-api
 
 > Motivation
 
-- what ? create a telegram bot with https://www.foaas.com/ https://quizapi.io/
+- what ? create a telegram bot with [link node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api)
 - why ? play with telegram bot
 - where ? https://telegram.org
-- How ? express.js, Telegraf.js
+- How ? express.js, node-telegram-bot-api
 
 > Choice of technologies
 
@@ -70,12 +70,11 @@ $ docker-compose down
 
 ```
 $ npm init
-$ npm install express telegraf
+$ npm install express
+$ npm install node-telegram-bot-api
 $ npm install --save node-fetch
 $ npm install --save-dev nodemon
 $ npm install --save-dev dotenv
-
-$ npm install --save node-cron
 ```
 
 ## adapt prettier
@@ -117,9 +116,10 @@ $ docker --version
 
 ## useful link
 
-https://telegraf.js.org/#/?id=example
-https://core.telegram.org/bots/api#message
-https://core.telegram.org/bots/api#sendpoll
+[link node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api)
+[link tutorial node-telegram-bot-api](https://github.com/hosein2398/node-telegram-bot-api-tutorial)
+[link telegram bot](https://core.telegram.org/bots/api#message)
+[link Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 ---
 
