@@ -134,15 +134,17 @@ const quizWizard = new WizardScene(
    */
   async (ctx) => {
     try {
-      // force exit the loop of the scene
-      const text = ctx.message.text
-      if (text === '/quiz cancel') {
-        ctx.reply('last question is ☠️ \nStart a new question with command /quiz')
-        return ctx.scene.leave()
-      }
+      if (ctx.message && ctx.message.text) {
+        // force exit the loop of the scene
+        const text = ctx.message.text
+        if (text === '/quiz cancel') {
+          ctx.reply('last question is ☠️ \nStart a new question with command /quiz')
+          return ctx.scene.leave()
+        }
 
-      if (text === '/quiz') {
-        ctx.reply('🙈 no 🙊 answer yet \nCancel the last question with command /quiz cancel')
+        if (text === '/quiz') {
+          ctx.reply('🙈 no 🙊 answer yet \nCancel the last question with command /quiz cancel')
+        }
       }
 
       // user has clic on the inlineKeyboard (one of the question's answer)
