@@ -18,6 +18,7 @@ app.listen(PORT, async () => {
   require('./extensionBot-simple-inlineLinks.js').launch(bot)
   require('./extensionBot-foaas.js').launch(bot)
   require('./extensionBot-quizDev.js').launch(bot, QUIZ_API_TOKEN)
+  require('./extensionBot-inlineBot-autocomplete.js').launch(bot)
 
   /*
    * launch the bot
