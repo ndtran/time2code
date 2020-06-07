@@ -179,6 +179,36 @@ $ crontab -e  // edit list
 
 ---
 
+# INFO WINDOWS 10 (using WSL)
+
+## install nodeJS
+
+```
+$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+$ apt-get install -y nodejs
+$ node --version
+```
+
+## install fish
+
+```
+$ sudo apt-add-repository ppa:fish-shell/release-2
+$ sudo apt-get update
+$ sudo apt-get install fish
+```
+
+## install yarn
+
+```
+$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+$ sudo apt update
+$ sudo apt install yarn (if using nvm: sudo apt install --no-install-recommends yarn)
+$ yarn --version
+```
+
+---
+
 # License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
